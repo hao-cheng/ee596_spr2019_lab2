@@ -64,7 +64,7 @@ python -m rasa_nlu.evaluate \
 
 * Q3: Report and discuss the model performance on intent detection and slot filling. You should also examine the confusion matrix `confmat.png` for analysis. For this lab, you do not need to compare your restuls with those in the
   [paper](https://aclweb.org/anthology/N18-2118).
-  See [Entity Scoring](https://aclweb.org/anthology/N18-2118://rasa.com/docs/nlu/evaluation/#entity-scoring)
+  See [Entity Scoring](https://rasa.com/docs/nlu/evaluation/#entity-scoring)
   to understand how scores are computed for slot filling.
 
 
