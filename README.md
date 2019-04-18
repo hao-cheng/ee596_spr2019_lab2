@@ -32,6 +32,11 @@ python -m spacy download en_core_web_md
 python -m spacy link en_core_web_md en
 ```
 
+Specific to Mac + Python 3: If you get an error about failed certificate verification (ssl.SSLError), you can update it by running:
+```
+/Applications/Python\ 3.6/Install\ Certificates.command
+```
+
 * Read the [Training Data Format](https://rasa.com/docs/nlu/dataformat/) to understand different data formats you can use for training RASA-NLU models.
 For your convenience, We have converted the ATIS dataset into `json` files in the folder `atis_json`.
 
