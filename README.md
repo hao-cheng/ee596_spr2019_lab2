@@ -16,7 +16,7 @@ source virtenv/bin/activate
 pip install rasa_nlu
 ```
 
-If you get error about "Failed building wheel for Twisted", please make sure
+If you get an error about "Failed building wheel for Twisted", please make sure
 you have installed `python3.6-dev` package by running the following commands on
 Ubuntu.
 ```
@@ -38,7 +38,7 @@ Specific to Mac + Python 3: If you get an error about failed certificate verific
 ```
 
 * Read the [Training Data Format](https://rasa.com/docs/nlu/dataformat/) to understand different data formats you can use for training RASA-NLU models.
-For your convenience, We have converted the ATIS dataset into `json` files in the folder `atis_json`.
+For your convenience, we have converted the ATIS dataset into `json` files in the folder `atis_json`.
 
 * Train a RASA-NLU model. In the folder `ee596_spr2019_lab2`, run
 ```
@@ -53,7 +53,7 @@ python -m rasa_nlu.train \
 * Q1: How many distinct intents and slots (entities) are there in the training set? You should see the numbers reported from the output. 
 * Q2: In Section 3.1 of the [paper](https://aclweb.org/anthology/N18-2118), it says there are 120 slot labels in the training data. Why it is not the same as the number of distinct entities?
 
-* Evaluate the RASA-NLU model. Check the `report/intent_report.json` intent detection results and `report/ner_crf_report.json` for slot filling results.
+* Evaluate the RASA-NLU model. (`${MODEL_NAME}` is the model produced from the training step above.) 
 ```
 echo "backend: Agg" > ./matplotlibrc
 python -m rasa_nlu.evaluate \
@@ -66,6 +66,9 @@ python -m rasa_nlu.evaluate \
   --histogram report/hist.png \
   --confmat report/confmat.png
 ```
+
+Check the `report/intent_report.json` intent detection results and `report/ner_crf_report.json` for slot filling results. 
+
 
 * Q3: Report and discuss the model performance on intent detection and slot filling. You should also examine the confusion matrix `confmat.png` for analysis. For this lab, you do not need to compare your restuls with those in the
   [paper](https://aclweb.org/anthology/N18-2118).
